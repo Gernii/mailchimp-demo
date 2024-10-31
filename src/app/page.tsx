@@ -31,7 +31,7 @@ export default function MailPage() {
         
         <div>
           <h2 className="text-xl font-semibold mb-4 text-center">Send Campaign</h2>
-          <CampaignForm onSuccess={fetchCampaigns} />
+          <CampaignForm fetchCampaigns={fetchCampaigns} />
         </div>
       </div>
 
