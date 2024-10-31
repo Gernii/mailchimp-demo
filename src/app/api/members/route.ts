@@ -17,7 +17,7 @@ export async function GET(request: Request) {
     });
 
     return NextResponse.json({
-      members: response.members.map(member => ({
+      members: response.members.map((member: {id: string, email_address: string, status: string, merge_fields: {FNAME: string, LNAME: string}, timestamp_signup: string}) => ({
         id: member.id,
         email: member.email_address,
         status: member.status,
