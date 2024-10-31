@@ -17,7 +17,7 @@ export async function GET() {
     });
 
     return NextResponse.json({
-      campaigns: response.campaigns.map(campaign => ({
+      campaigns: response.campaigns.map((campaign: {id: string, web_id: string, status: string, settings: {subject_line: string, preview_text: string}, send_time: string, emails_sent: number}) => ({
         id: campaign.id,
         webId: campaign.web_id,
         status: campaign.status,
